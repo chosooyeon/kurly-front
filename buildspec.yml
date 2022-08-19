@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Entered the install phase...
+      - npm install --global yarn
+      - yarn install
+  build:
+    commands:
+      - echo Entered the build phase...
+      - yarn build
+
+
+artifacts:
+  files:
+    - build/**/*
