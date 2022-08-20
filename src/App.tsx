@@ -1,6 +1,6 @@
 function App() {
   return (
-    <p>test home</p>
+    <p>ci/cd 되라</p>
   );
 }
 
