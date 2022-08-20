@@ -22,11 +22,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     font-family: 'Noto Sans KR', 'sans-serif';
     overflow-x: hidden;
     color: ${(props) => props.theme.color.base};
+    width: 1059px
   }
 `;
 
