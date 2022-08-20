@@ -1,5 +1,5 @@
 const SearchItem = () => {
-    //검색바 + 버튼
+    //사진 + 폰트
 }
 
 export default SearchItem;
