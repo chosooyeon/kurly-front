@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   html {
     box-sizing: border-box;
-    font-size: $base-font-size;
+    font-size: 16px;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
