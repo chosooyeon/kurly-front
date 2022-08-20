@@ -1,6 +1,6 @@
 function App() {
   return (
-    <p>ci/cd 되라</p>
+    <p>ci/cd 되라!!!!</p>
   );
 }
 
