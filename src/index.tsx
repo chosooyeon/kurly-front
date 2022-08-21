@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6,15 +6,37 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 import mainTheme from './ui/style/theme';
 import GlobalStyle from './ui/style/GlobalStyle';
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+class ErrorBoundary extends React.Component {
+  constructor(props?: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error?: any) { // 다음 렌더링에서 폴백 UI가 보이도록 상태를 업데이트 합니다.
+    return { hasError: true };
+  }
+}
+
+
 root.render(
   <ThemeProvider theme={mainTheme}>
     <GlobalStyle/>
     <React.StrictMode>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        {/* <Suspense fallback={<div>loading</div>}> */}
+            {/* <ErrorBoundary> */}
+              <App />
+            {/* </ErrorBoundary> */}
+        {/* </Suspense> */}
+      </QueryClientProvider>
     </React.StrictMode>
   </ThemeProvider>
 );
