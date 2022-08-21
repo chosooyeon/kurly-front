@@ -1,23 +1,30 @@
-import styled from 'styled-components';
-import ProductItem from "../molecules/ProductItem";
+
+import PostLayout from "../templates/PostLayout";
+import { useQuery } from "react-query";
+import toast from 'react-hot-toast'
+import axios from "axios";
+
+interface Post {
+    result?: any,
+    pageTotal?: number,
+    total?: number
+  }
+  
+const url = `https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`
+const getPosts = async () => {
+    const { data } = await axios.get(`https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`);
+    return data;
+};
 
 const Post = () => {
+    const data = useQuery("posts", () => axios.get(url), {
+        onError: (error) => toast.error('무언가 잘못되었다'),
+    });
+
     return(
         <>
-            <Title>내일 저녁으로 이건 어때요?</Title>
-            <div style={{ display:'flex' , width: 1050, margin: '0 auto' }}>
-                <ProductItem/>
-                <ProductItem/>
-                <ProductItem/>
-                <ProductItem/>
-            </div>
+            <PostLayout {...data}/>  
         </>
     )
 }
-
-const Title = styled.div`
-  ${(props) => props.theme.font.medium_28_35};
-  text-align:center;
-`;
-
 export default Post;

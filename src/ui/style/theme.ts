@@ -24,7 +24,7 @@ export const fontStyle = ({
         letterSpacing = -0.5,
     }: {
     fontSize: number;
-    fontWeight: 100 | 300 | 400 | 500 | 600 | 700 | 900;
+    fontWeight: 100 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
     lineHeight: number;
     letterSpacing?: number;
 }): string => {
@@ -46,12 +46,14 @@ const mainTheme: DefaultTheme = {
     },
     font: {
         light_16_24: fontStyle({ fontWeight: 300, fontSize: 16, lineHeight: 24 }),
+        normal_14_22: fontStyle({ fontWeight: 400, fontSize: 14, lineHeight: 22 }),
+        normal_16_18: fontStyle({ fontWeight: 400, fontSize: 16, lineHeight: 18 }),
         normal_13_18: fontStyle({ fontWeight: 400, fontSize: 13, lineHeight: 18 }),
         medium_12_13: fontStyle({ fontWeight: 500, fontSize: 12, lineHeight: 13 }),
         medium_28_50: fontStyle({ fontWeight: 500, fontSize: 28, lineHeight: 50 }),
         medium_28_35: fontStyle({ fontWeight: 600, fontSize: 28, lineHeight: 35 }),
         bold_18_26: fontStyle({ fontWeight: 700, fontSize: 18, lineHeight: 26 }),
- 
+        bold_16_26: fontStyle({ fontWeight: 800, fontSize: 16, lineHeight: 26 }),
     },
     media: {
         xx_small: `screen and (max-width: 280px)`,
