@@ -24,7 +24,7 @@ export const fontStyle = ({
         letterSpacing = -0.5,
     }: {
     fontSize: number;
-    fontWeight: 100 | 300 | 400 | 500 | 700 | 900;
+    fontWeight: 100 | 300 | 400 | 500 | 600 | 700 | 900;
     lineHeight: number;
     letterSpacing?: number;
 }): string => {
@@ -49,6 +49,7 @@ const mainTheme: DefaultTheme = {
         normal_13_18: fontStyle({ fontWeight: 400, fontSize: 13, lineHeight: 18 }),
         medium_12_13: fontStyle({ fontWeight: 500, fontSize: 12, lineHeight: 13 }),
         medium_28_50: fontStyle({ fontWeight: 500, fontSize: 28, lineHeight: 50 }),
+        medium_28_35: fontStyle({ fontWeight: 600, fontSize: 28, lineHeight: 35 }),
         bold_18_26: fontStyle({ fontWeight: 700, fontSize: 18, lineHeight: 26 }),
  
     },

@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Noto Sans KR', 'sans-serif';
     overflow-x: hidden;
     color: ${(props) => props.theme.color.base};
-    width: 1059px
+    width: 1059px;
   }
 `;
 
