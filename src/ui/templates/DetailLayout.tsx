@@ -1,10 +1,10 @@
 import DetailTopSection from "../organisms/DetailTopSection";
-import { detailData } from "../../const";
+import { detailData, searchData } from "../../const";
 
 const DetailLayout = () => {
     return(
         <>
-            <DetailTopSection {...detailData}/>
+            <DetailTopSection search={searchData} detail={detailData}/>
         </>
     )
 }

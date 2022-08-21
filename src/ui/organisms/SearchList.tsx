@@ -1,9 +1,14 @@
 import SearchItem from "../molecules/SearchItem/SearchItem"
-
+import {Wrap} from './SearchList.styled'
 const SearchList = () => {
     return <>
-    <SearchItem/>
-   
+
+    <Wrap>
+        <SearchItem/>
+        <SearchItem/> 
+        <SearchItem/>
+        <SearchItem/>
+    </Wrap>
     
     </>
 }

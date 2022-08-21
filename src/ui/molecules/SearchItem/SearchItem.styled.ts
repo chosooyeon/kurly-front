@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 const Wrap = styled.div`
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+`
+
+const Section = styled.div`
     height: 100px;
     align-items: left;
 `
@@ -17,4 +23,4 @@ const Price = styled.p`
     ${props => props.theme.font.bold_18_26}
 `
 
-export {Wrap, Label, Title, Price}
+export {Wrap, Section, Label, Title, Price}

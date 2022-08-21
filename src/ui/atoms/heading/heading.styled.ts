@@ -7,7 +7,8 @@ const Heading1 = styled.h2`
  width: auto;
  margin: 10px 0;
 `
-const Heading2 = styled.p`
- 
+const Heading5 = styled.p`
+ ${props => props.theme.font.normal_10_12}
+ color: ${props => props.theme.color.grey_2}
 `
-export { Heading1, Heading2 }
+export { Heading1, Heading5 }

@@ -5,12 +5,19 @@ const TopSection = styled.div`
     -webkit-box-pack: justify;
     justify-content: space-between;
 `
-
 const RightWrap = styled.div`
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    padding: 10px;
+
+    > div{
+        margin-bottom: 15px;
+    }
 `
 
-export { TopSection, RightWrap }
+const Row = styled.div`
+    width: auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+`
+
+export { TopSection, RightWrap, Row }
