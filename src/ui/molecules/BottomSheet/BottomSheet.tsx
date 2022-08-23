@@ -1,28 +1,37 @@
 import { useState } from "react"
-import SquareButton from "../../atoms/button/SquareButton"
-import { Img, ImgAsset } from "../../atoms/image/image.styled"
+import SearchFull from '../../atoms/button/SquareFull'
+import { ImgAsset } from "../../atoms/image/image.styled"
 import CartList from "../../organisms/CartList/CartList"
 import { Wrap, Section } from "./BottomSheet.styled"
+import Backdrop from '@mui/material/Backdrop';
 
 const BottomSheet = () => {
     const [isExpand, setExpand] = useState<boolean>(false)
     const handleExpand = () => {
-        // setExpand(true)
-        // console.log(isExpand)
-        console.log('fnkjsfljsnlf')
+        setExpand(v => !v)
+        console.log(isExpand)
     }
 
+
     return <>
-    <Wrap expand={isExpand}>
-        {isExpand ? 
-            <CartList />
-         : 
-            <Section>
-                <ImgAsset/>
-                <SquareButton onClick={handleExpand} props={['한 번에 장바구니에 담기']}/>
-            </Section>
-        }
-    </Wrap>
+        {/* <Backdrop
+            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer - 1 }}
+            open={isExpand}
+            onClick={handleExpand}
+        ></Backdrop> */}
+        <Wrap expand={isExpand}>
+            {isExpand ? 
+                <>
+                    <CartList />
+                    <SearchFull onHandleExpand={handleExpand} txt={['한 번에 장바구니에 담기']}/>
+                </>
+            : 
+                <Section>
+                    <ImgAsset/>
+                    <SearchFull onHandleExpand={handleExpand} txt={['한 번에 장바구니에 담기']}/>
+                </Section>
+            }
+        </Wrap>
     </>
 }
 

@@ -10,4 +10,15 @@ const Square = styled.div`
     border-radius: 6px;
     text-align: center;
 `
-export { Square }
+const SquareFull = styled.div`
+    width: 90%;
+    height: fit-content;
+    ${props => props.theme.font.bold_16_24}
+    color: ${props => props.theme.color.white};
+    background-color: ${props => props.theme.color.brand};
+    padding: 12px;
+    margin: 0 0 8px 8px;
+    border-radius: 6px;
+    text-align: center;
+`
+export { Square, SquareFull }

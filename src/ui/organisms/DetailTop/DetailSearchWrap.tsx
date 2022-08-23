@@ -24,7 +24,7 @@ const DetailSearchWrap = (props:any) => {
                 <Heading5>이런 제품도 있어요!</Heading5>
                 <ChipList chipList={props?.detail?.relList}/>
             </div>
-            <SquareButton props={btnTxt}/>
+            <SquareButton txt={btnTxt}/>
         </Row>
     </>
 }

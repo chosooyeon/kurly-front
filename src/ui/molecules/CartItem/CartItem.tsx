@@ -9,7 +9,11 @@ const CartItem = () => {
                 <S.Price>5,200원</S.Price>
             </S.Section>
             <S.Section>
-                
+                <S.Count>
+                    <S.CountInner>-</S.CountInner>
+                    <S.CountInner>5</S.CountInner>
+                    <S.CountInner>+</S.CountInner>
+                </S.Count>
             </S.Section>
         </S.Wrap>
     </>

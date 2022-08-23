@@ -7,6 +7,7 @@ const CartList = () => {
         <CartItem/>
         <CartItem/>
         <CartItem/>
+        <CartItem/>
     </Wrap>
     
     </>

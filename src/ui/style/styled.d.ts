@@ -19,6 +19,7 @@ declare module 'styled-components' {
             medium_12_13: string;
             medium_28_50: string;
             bold_13_15: string;
+            bold_16_24: string;
             bold_18_26: string;
         };
         media: {

@@ -53,6 +53,7 @@ const mainTheme: DefaultTheme = {
         medium_28_50: fontStyle({ fontWeight: 500, fontSize: 28, lineHeight: 50 }),
         medium_24_34: fontStyle({ fontWeight: 500, fontSize: 24, lineHeight: 34 }),
         bold_13_15: fontStyle({ fontWeight: 700, fontSize: 13, lineHeight: 15 }),
+        bold_16_24: fontStyle({ fontWeight: 700, fontSize: 16, lineHeight: 24 }),
         bold_18_26: fontStyle({ fontWeight: 700, fontSize: 18, lineHeight: 26 }),
     },
     media: {
