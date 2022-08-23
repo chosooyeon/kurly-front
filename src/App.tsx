@@ -10,6 +10,7 @@ import Wish from "./ui/pages/Wish";
 function App() {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/detail' element={<Detail />}/>
@@ -22,6 +23,7 @@ function App() {
               <p>빈 페이지 입니다</p>
             </main>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
