@@ -6,11 +6,14 @@ import Home from "./ui/pages/Home";
 import Post from "./ui/pages/Post";
 import Search from "./ui/pages/Search";
 import Wish from "./ui/pages/Wish";
+import { isMobile } from "./service/hooks"
+import MobileHeader from "./ui/molecules/MobileHeader";
+import MobileBottom from "./ui/molecules/MobileBottom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      { isMobile() ? <MobileHeader/> : <Header/> }
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/detail' element={<Detail />}/>
@@ -23,7 +26,7 @@ function App() {
               <p>빈 페이지 입니다</p>
             </main>}/>
       </Routes>
-      <Footer/>
+      { isMobile() ? <MobileBottom/> : <Footer/> }
     </BrowserRouter>
   );
 }
