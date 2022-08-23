@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import * as t from '../../../assets/top.png'
+import top from '../../../assets/top.png'
 
 const TopButton = styled.div`
-    background-image: url(${t});
+    position: sticky;
+    right: 16px;
+    bottom: 16px;
+    background-image: url(${top});
 `
 
-export default { TopButton }
+export { TopButton }

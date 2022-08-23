@@ -21,30 +21,28 @@ const Header = () => {
       };
 
     const handleScroll = throttle(updateScroll, 100);
-
     
-
     return(
         <>
             {
                 scrollFlag
                 ?
                 <>
-                <div style={{position:'fixed'}}>
-                    <ul>
+                <div style={{position:'fixed', display:'inline-flex'}}>
+                    <ul style={{ display:'inline-flex' }}>
                         <li>버튼</li>
                         <li>카테고리</li>
                     </ul>
-                    <ul>
+                    <ul style={{ display:'inline-flex' }}>
                         <li>신상품</li>
                         <li>베스트</li>
                         <li>알뜰쇼핑</li>
                         <li>특가/혜택</li>
                     </ul>
-                    <ul>
+                    <ul style={{ display:'inline-flex' }}>
                         <div>찾기</div>
                     </ul>
-                    <ul>
+                    <ul style={{ display:'inline-flex' }}>
                         <li>버튼</li>
                         <li>버튼</li>
                         <li>버튼</li>

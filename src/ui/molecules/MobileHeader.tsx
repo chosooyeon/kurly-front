@@ -1,14 +1,16 @@
+import styled from 'styled-components';
+
 const MobileHeader = () => {
     return(
     <>
-    <div style={{ position:'fixed'}}>
-        <div>
+    <div style={{ position:'fixed', width:'100%' }}>
+        <MobileHeaderTop>
             <img></img>
             <div></div>
             <img/>
             <img/>
-        </div>
-        <div>
+        </MobileHeaderTop>
+        <div style={{ backgroundColor:'white' }}>
             <ul style={{ display: 'inline-flex' }}>
                 <li>컬리추천</li>
                 <li>신상품</li>
@@ -21,5 +23,9 @@ const MobileHeader = () => {
     </>
     )
 }
+
+const MobileHeaderTop = styled.div`
+    background-color: ${props => props.theme.color.brand};
+`
 
 export default MobileHeader

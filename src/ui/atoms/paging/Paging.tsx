@@ -10,6 +10,7 @@ const Paging = () => {
   };
 
   return (
+    <div id="page">
     <Pagination
       activePage={page}
       itemsCountPerPage={10}
@@ -19,6 +20,7 @@ const Paging = () => {
       nextPageText={"›"}
       onChange={handlePageChange}
     />
+    </div>
   );
 };
 

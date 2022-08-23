@@ -7,20 +7,33 @@ import styled from 'styled-components';
 const MobileBottom = () => {
     return(
         <>
-        <div style={{ position:'fixed', bottom:'0' }}>
-            <ul>
+        <MobileFooter>
+            <ul style={{display: 'inline-flex'}}>
                 <li><BottomImg src={ home }/></li>
                 <li><BottomImg src={ hamber }/></li>
                 <li><BottomImg src={ search }/></li>
                 <li><BottomImg src={ person }/></li>
             </ul>
-        </div>
+        </MobileFooter>
         </>
     )
 }
 
+const MobileFooter = styled.div`
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+`
+
+const FooterUl = styled.ul`
+
+`
+
 const BottomImg = styled.img`
-  width: 24px;
+    padding: 0 16px;
+    width: 24px;
 `;
 
 export default MobileBottom

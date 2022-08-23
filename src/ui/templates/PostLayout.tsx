@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ProductItem from "../molecules/ProductItem";
+import ProductItem from "../molecules/ProductItem/ProductItem";
 import banner from "../../assets/banner.webp";
 interface Post {
     result?: any,

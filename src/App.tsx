@@ -9,6 +9,7 @@ import Wish from "./ui/pages/Wish";
 import { isMobile } from "./service/hooks"
 import MobileHeader from "./ui/molecules/MobileHeader";
 import MobileBottom from "./ui/molecules/MobileBottom";
+import MyTopButton from "./ui/atoms/top/MyTopButton";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </main>}/>
       </Routes>
       { isMobile() ? <MobileBottom/> : <Footer/> }
+      <MyTopButton/>
     </BrowserRouter>
   );
 }
