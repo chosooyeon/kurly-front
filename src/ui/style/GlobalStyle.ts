@@ -2,6 +2,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from 'styled-reset'
 import { normalize } from 'styled-normalize'
+import { isMobile } from "../../service/hooks";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -28,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     overflow-y: hidden;
     color: ${(props) => props.theme.color.base};
-    width: 1059px;
+    ${isMobile() ?`` :`width: 1059px;`}
   }
 `;
 
