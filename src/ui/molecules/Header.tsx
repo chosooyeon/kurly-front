@@ -54,7 +54,7 @@ const Header = () => {
                 :
                 <>
                 <Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</Banner>
-                <div style={{ position:'fixed' }}>
+                <div style={{ marginBottom:'20px' }}>
                     <ul style={{ display:'flex', float:'right' }}>
                         <li>회원가입</li>
                         <li>|</li>
