@@ -1,5 +1,5 @@
 import food1 from '../../../assets/food1.png';
-import cert from '../../../assets/cert.png';
+import cert from '../../../assets/button/detail_cart.svg';
 import * as S from './ProductItem.styled'
 
 const ProductItem = (props:any) => {

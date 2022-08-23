@@ -2,10 +2,14 @@ import styled from "styled-components";
 import top from '../../../assets/top.png'
 
 const TopButton = styled.div`
-    position: sticky;
-    right: 16px;
-    bottom: 16px;
-    background-image: url(${top});
+    z-index: 3;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    background-color:white;
 `
+//     background: url(${top}) center no-repeat;
 
 export { TopButton }

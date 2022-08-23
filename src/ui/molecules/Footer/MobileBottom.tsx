@@ -1,7 +1,7 @@
-import home from '../../assets/icon/home.png'
-import hamber from '../../assets/icon/hamberger.png'
-import search from '../../assets/icon/searchBlack.png'
-import person from '../../assets/icon/person.png'
+import home from '../../../assets/icon/home.png'
+import hamber from '../../../assets/icon/hamberger.png'
+import search from '../../../assets/icon/searchBlack.png'
+import person from '../../../assets/icon/person.png'
 import styled from 'styled-components';
 
 const MobileBottom = () => {

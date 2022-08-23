@@ -1,8 +1,12 @@
-import styled from 'styled-components';
-import kurly from '../../assets/kurly.png';
-import Search from '../atoms/search/Search';
+import kurly from '../../../assets/kurly.png';
+import location from '../../../assets/Location.png';
+import heart from '../../../assets/heart.png';
+import cert from '../../../assets/cert.png';
+import hamber from '../../../assets/hamber.png';
+import Search from '../../atoms/search/Search';
 import { useEffect, useState } from 'react';
-import throttle from '../../service/throttle';
+import throttle from '../../../service/throttle';
+import * as S from './Header.styled'
 
 const Header = () => {
     const [scrollFlag, setScrollFlag] = useState(false); 
@@ -28,9 +32,9 @@ const Header = () => {
                 scrollFlag
                 ?
                 <>
-                <div style={{position:'fixed', display:'inline-flex'}}>
+                <S.FixHeader>
                     <ul style={{ display:'inline-flex' }}>
-                        <li>버튼</li>
+                        <li><img src={hamber}/></li>
                         <li>카테고리</li>
                     </ul>
                     <ul style={{ display:'inline-flex' }}>
@@ -39,19 +43,19 @@ const Header = () => {
                         <li>알뜰쇼핑</li>
                         <li>특가/혜택</li>
                     </ul>
-                    <ul style={{ display:'inline-flex' }}>
+                    {/* <ul style={{ display:'inline-flex' }}>
                         <div>찾기</div>
+                    </ul> */}
+                    <ul style={{ display:'flex' }}>
+                        <li><img width={42} height={42} src={location}/></li>
+                        <li><img width={36} height={36} src={heart}/></li>
+                        <li><img width={36} height={36} src={cert}/></li>
                     </ul>
-                    <ul style={{ display:'inline-flex' }}>
-                        <li>버튼</li>
-                        <li>버튼</li>
-                        <li>버튼</li>
-                    </ul>
-                </div>
+                </S.FixHeader>
                 </>
                 :
                 <>
-                <Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</Banner>
+                <S.Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</S.Banner>
                 <div style={{ marginBottom:'20px' }}>
                     <ul style={{ display:'flex', float:'right' }}>
                         <li>회원가입</li>
@@ -63,14 +67,20 @@ const Header = () => {
                     <div style={{ display:'flex', height: '100', paddingTop: '36' }}>
                         <div>
                             <div><img src={ kurly } width={ 86 } height={ 82 }/></div>
-                            <ul style={{ display:'flex' }}>
+                            {/* <ul style={{ display:'flex' }}>
                                 <li>마켓컬리</li>
                                 <li>|</li>
                                 <li>뷰티컬리</li>
-                            </ul>
+                            </ul> */}
                         </div>
                         <Search></Search>
-                        <div></div>
+                        <div>
+                            <ul style={{ display:'flex' }}>
+                                <li><img width={42} height={42} src={location}/></li>
+                                <li><img width={36} height={36} src={heart}/></li>
+                                <li><img width={36} height={36} src={cert}/></li>
+                            </ul>
+                        </div>
                         <div></div>
                     </div>
                     {/* <Fixed>
@@ -84,30 +94,5 @@ const Header = () => {
         </>
     )
 }
-
-const Banner = styled.div`
-    text-align: center;
-    background: rgb(95, 0, 128);
-    color: white;
-    font-size: 14px;
-    line-height: 42px;
-`;
-
-const Fixed = styled.div`
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
-  width: 100%;
-  position: fixed;
-  z-index: 101;
-  top: 0px;
-  left: 0px;
-`;
-
-const HamberImg = styled.span`
-    width: 16px;
-    height: 14px;
-    margin-right: 14px;
-    background: url("../../assets/hamber.png") no-repeat;
-`;
 
 export default Header;
