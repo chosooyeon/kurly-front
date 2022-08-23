@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Noto Sans KR', 'sans-serif';
     overflow-x: hidden;
+    overflow-y: hidden;
     color: ${(props) => props.theme.color.base};
     ${isMobile() ?`` :`width: 1059px;`}
   }

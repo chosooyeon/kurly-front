@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./ui/molecules/Footer";
+import Header from "./ui/molecules/Header";
 import Detail from "./ui/pages/Detail";
 import Home from "./ui/pages/Home";
 import Post from "./ui/pages/Post";
