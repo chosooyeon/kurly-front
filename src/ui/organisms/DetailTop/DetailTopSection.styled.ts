@@ -17,7 +17,7 @@ const MTopSection = styled.div`
 
 const RightWrap = styled.div`
     padding: 10px;
-
+    min-width: 450px;
     > div{
         margin-bottom: 15px;
     }

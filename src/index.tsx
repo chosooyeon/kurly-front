@@ -29,15 +29,15 @@ class ErrorBoundary extends React.Component {
 root.render(
   <ThemeProvider theme={mainTheme}>
     <GlobalStyle/>
-    <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
+    {/* <React.StrictMode> */}
+      {/* <QueryClientProvider client={queryClient}> */}
         {/* <Suspense fallback={<div>loading</div>}> */}
             {/* <ErrorBoundary> */}
               <App />
             {/* </ErrorBoundary> */}
         {/* </Suspense> */}
-      </QueryClientProvider>
-    </React.StrictMode>
+      {/* </QueryClientProvider> */}
+    {/* </React.StrictMode> */}
   </ThemeProvider>
 );
 

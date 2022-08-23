@@ -3,16 +3,15 @@ import { Heading5 } from '../../atoms/heading/heading.styled';
 import ChipList from '../../molecules/ChipList/ChipList';
 import SearchList from '../SearchList/SearchList';
 import SquareButton from '../../atoms/button/SquareButton';
-import SearchBar from '../../molecules/SearchBar';
+import Searchbar from '../../molecules/Searchbar/Searchbar';
 
-// TODO: 추후 selectbox 수정
 const btnTxt = ['필수 재료','한 번에 담기'];
 
 const DetailSearchWrap = (props:any) => {
     return <>
             <Row>
-            <ChipList chipList={props?.detail?.chipList}/>
-            <SearchBar/>
+            <ChipList tags={props?.detail?.post?.tags}/>
+            <Searchbar/>
         </Row>
         <Row>
             <Heading5>총 {props?.search.length}개</Heading5>
@@ -22,7 +21,7 @@ const DetailSearchWrap = (props:any) => {
         <Row>
             <div>
                 <Heading5>이런 제품도 있어요!</Heading5>
-                <ChipList chipList={props?.detail?.relList}/>
+                <ChipList tags={props?.detail?.tags}/>
             </div>
             <SquareButton txt={btnTxt}/>
         </Row>

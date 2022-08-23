@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import DetailSearchWrap from '../organisms/DetailTop/DetailSearchWrap';
-import PictureModule from './PictureModule/PictureModule';
-import * as S from './PictureModule/PictureModule.styled'
+import DetailSearchWrap from '../../organisms/DetailTop/DetailSearchWrap';
+import PictureModule from '../PictureModule/PictureModule';
+import * as S from '../PictureModule/PictureModule.styled'
 import { Slide } from './Slider.styled';
 
 const Slider = (props:any) => {
@@ -11,7 +11,7 @@ const Slider = (props:any) => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            <SwiperSlide><PictureModule/></SwiperSlide>
+            <SwiperSlide><PictureModule searchData={props?.searchData} picture={props?.detail?.post}/></SwiperSlide>
             <SwiperSlide><DetailSearchWrap {...props}/></SwiperSlide>
         </Slide>
     </>

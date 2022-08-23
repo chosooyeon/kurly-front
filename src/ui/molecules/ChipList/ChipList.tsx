@@ -1,15 +1,14 @@
 import Chip from '../../atoms/chip/chip'
 import {Wrap} from './ChipList.styled'
 interface IChipList {
-    chipList: any;
+    tags?: any;
 }
 
 const ChipList = (props?:IChipList) => {
-    console.log(props?.chipList)
     return <>
         <Wrap>
-            {props?.chipList.map((item:string, i:number) => {
-                return <Chip item={item}/>
+            {props?.tags?.map((item:any, i:number) => {
+                return <Chip key={i} item={item}/>
             })}
         </Wrap>
     </>

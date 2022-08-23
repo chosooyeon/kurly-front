@@ -8,7 +8,7 @@ const Chip = styled.div<{isActive?: boolean}>`
     height: fit-content;
     background: ${props => props.theme.color.grey_3};
     border-radius: 9px;
-    color: ${props => !props.isActive ? props.theme.color.brand : props.theme.color.grey_2}
+    color: ${props => props.isActive ? props.theme.color.brand : props.theme.color.grey_2}
 `
 
 export { Chip }
