@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import cart from '../../../assets/button/detail_cart.svg'
+import food from '../../../assets/food2.png'
 
 const Img = styled.div<{path?: string}>`
     width: 464px;
     height: 552px;
-    background: url(https://img-cf.kurly.com/shop/data/goods/1620014345838l0.jpg) 0% 0% / cover, url(https://res.kurly.com/_next/static/images/noimg-150x195-2c819ff….svg) 50% 50% / contain no-repeat rgb(245, 245, 245);
+    background: url(${food});
+    background-size: cover;
+
 `
 
 const ImgAsset = styled.div<{props?: any}>`
