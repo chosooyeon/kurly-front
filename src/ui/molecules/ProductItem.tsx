@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import food1 from '../../assets/food1.png';
 
-const ProductItem = () => {
+const ProductItem = (props:any) => {
     return(
         <>
             <div>

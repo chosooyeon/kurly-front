@@ -1,31 +1,29 @@
 import styled from 'styled-components';
-import SearchPC from '../atoms/search/searchPC'
-
 import kurly from '../../assets/kurly.png';
+import Input from '../atoms/input/Input';
 
 const Header = () => {
     return(
         <>
             {/* <Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</Banner> */}
             <div>
-                <div style={{ display:'flex', float:'right' }}>
-                    <div>회원가입</div>
-                    <div>|</div>
-                    <div>로그인</div>
-                    <div>|</div>
-                    <div>고객센터</div>
-                </div>
-                <div style={{ height: '100', paddingTop: '36' }}>
+                <ul style={{ display:'flex', float:'right' }}>
+                    <li>회원가입</li>
+                    <li>|</li>
+                    <li>로그인</li>
+                    <li>|</li>
+                    <li>고객센터</li>
+                </ul>
+                <div style={{ display:'flex', height: '100', paddingTop: '36' }}>
                     <div>
                         <div><img src={ kurly } width={ 86 } height={ 82 }/></div>
-                        {/* <div>마켓컬리</div>
-                        <div>|</div>
-                        <div>뷰티컬리</div> */}
+                        <ul style={{ display:'flex' }}>
+                            <li>마켓컬리</li>
+                            <li>|</li>
+                            <li>뷰티컬리</li>
+                        </ul>
                     </div>
-                    <SearchPC>
-                        <input id="gnb_search" placeholder="검색어를 입력해주세요" value=""/>
-                        <button></button>
-                    </SearchPC>
+                    <Input></Input>
                     <div></div>
                     <div></div>
                 </div>

@@ -11,10 +11,6 @@ interface Post {
   }
   
 const url = `https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`
-const getPosts = async () => {
-    const { data } = await axios.get(`https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`);
-    return data;
-};
 
 const Post = () => {
     const data = useQuery("posts", () => axios.get(url), {

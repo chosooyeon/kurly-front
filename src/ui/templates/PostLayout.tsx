@@ -8,11 +8,16 @@ interface Post {
   }
 
 const PostLayout = (props:any) => {
-    console.log(props,"props")
+    // console.log(props.data.results,"props")
     return(
         <>
             <Title>내일 저녁으로 이건 어때요?</Title>
             <div style={{ display:'flex' , width: 1050, margin: '0 auto' }}>
+                {/* {
+                    props.data.results.map((item:any)=>{
+                        <ProductItem {...item} />
+                    })
+                } */}
                 <ProductItem/>
                 <ProductItem/>
                 <ProductItem/>

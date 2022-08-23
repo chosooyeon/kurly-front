@@ -4,7 +4,8 @@ const footArr = (['컬리소개','컬리소개영상','인재채용','이용약�
 const Footer = () => {
     return(
         <>
-            <div>
+        <div>
+            <div style ={{display:'flex', width:'50%', float:'left' }}>
                 <div>고객행복센터</div>
                 <div>
                     <div>1644-1107</div>
@@ -35,21 +36,21 @@ const Footer = () => {
                     <FootSubGrey>비회원의 경우 메일로 문의 바랍니다.</FootSubGrey>
                 </div>
             </div>
-            <div>
+            <ul style={{display:'flex', width: '50%', float:'right' }}>
                 {
                     footArr.map((item)=>(
                         <FootSub>{item}</FootSub>
                     ))
                 }
-                
-
-            </div>
+            </ul>
+        </div>
             <div>
 
             </div>
             <div>
 
             </div>
+            
         </>
     )
 }
@@ -66,7 +67,7 @@ const FootBox = styled.div`
     text-align: center;
 `
 
-const FootSub = styled.div`
+const FootSub = styled.li`
     ${(props) => props.theme.font.normal_14_22};
 `
 const FootSubGrey = styled.div`
