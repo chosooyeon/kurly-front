@@ -2,7 +2,7 @@ import { useState } from 'react'
 import * as S from './PictureModule.styled'
 
 const PictureModule = (props?:any) => {
-    const [focus, setFocus] = useState<number>(99);
+    const [focus, setFocus] = useState<number>(0);
 
     const onClickSearchData = (v:string,i:number) => {
         props?.searchData(v);

@@ -8,8 +8,28 @@ async function getDetail () {
 }
 
 async function getSearch (payload?:string) {
-    const res = await axios.get(`/product?take=8&page=0&keyword=${payload}&userId=1`)
+    const res = await axios.get(`/product?take=&page=0&keyword=${payload}&userId=1`)
     return res.data
 }
 
-export { getDetail, getSearch }
+async function putCart (payload?:any) {
+    const res = await axios.post(`/product/cart`,{
+        userId: payload?.userId,
+        productId: payload?.productId
+      })
+    return res.data
+}
+
+async function putCartAll (payload?:any) {
+    const res = await axios.post(`/product/cart/bulk`, {
+        "productMap":
+            payload?.productMap
+        ,
+        "userId": payload?.userId
+    })
+    return res.data
+}
+
+
+
+export { getDetail, getSearch, putCart, putCartAll }

@@ -26,7 +26,6 @@ const BottomSheet = () => {
                 </>
             : 
                 <Section>
-                    <ImgAsset/>
                     <SearchFull onHandleExpand={handleExpand} txt={['한 번에 장바구니에 담기']}/>
                 </Section>
             }

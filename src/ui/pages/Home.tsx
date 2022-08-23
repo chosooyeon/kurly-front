@@ -16,11 +16,11 @@ const url = `https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/pos
 
 const Post = () => {
 
-    const query = useQuery("posts", () => axios.get(url), {
-        onError: (error) => toast.error('무언가 잘못되었다'),
-    });
+    // const query = useQuery("posts", () => axios.get(url), {
+    //     onError: (error) => toast.error('무언가 잘못되었다'),
+    // });
     
-    const data = useDebounceValue(query, 500);
+    // const data = useDebounceValue(query, 500);
     // const { status, data, error, isFetching, isLoading } = useReactQuery(
     //     debouncedSearchQuery,
     //     "0"
@@ -29,13 +29,14 @@ const Post = () => {
     
 
     return(
-        <>
-            <PostLayout {...data}/>  
-            <PostLayout {...data}/>  
-            <PostLayout {...data}/>  
-            <PostLayout {...data}/>  
-            <PostLayout {...data}/>  
-        </>
+        <></>
+        // <>
+        //     <PostLayout {...data}/>  
+        //     <PostLayout {...data}/>  
+        //     <PostLayout {...data}/>  
+        //     <PostLayout {...data}/>  
+        //     <PostLayout {...data}/>  
+        // </>
     )
 }
 

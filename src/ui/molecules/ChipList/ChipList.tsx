@@ -5,6 +5,7 @@ interface IChipList {
 }
 
 const ChipList = (props?:IChipList) => {
+    console.log('props??', props)
     return <>
         <Wrap>
             {props?.tags?.map((item:any, i:number) => {

@@ -9,6 +9,8 @@ const Detail = () => {
         const res = getDetail();
         res.then((d => setDetail(d)));
     },[])
+
+    
     return(
         <>
             <DetailLayout detail={detail}/>
