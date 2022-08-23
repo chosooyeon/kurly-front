@@ -21,6 +21,30 @@ const PostLayout = (props:getPost) => {
             <Title>{props?.title}</Title>
             <CategoryList/>
             <CategoryMiddle/>
+            <div style={{display:'flex'}}>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+            </div>
+            <div style={{display:'flex'}}>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+            </div>
+            <div style={{display:'flex'}}>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+            </div>
+            <div style={{display:'flex'}}>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+                <ProductItem/>
+            </div>
             <div style={{ display:'flex' , width: 1050, margin: '0 auto' }}>
                 {/* {
                     props.data.results.map((item:any)=>{

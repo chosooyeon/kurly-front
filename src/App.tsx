@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       { isMobile() ? <MobileHeader/> : <Header/> }
       <Routes>
-        {/* <Route path='/' element={<Home />}/> */}
+        <Route path='/' element={<Home />}/>
         <Route path='/detail' element={<Detail />}/>
         <Route path='/post' element={<Post />}/>
         <Route path='/search' element={<Search />}/>

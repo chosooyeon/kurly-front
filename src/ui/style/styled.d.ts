@@ -14,6 +14,7 @@ declare module 'styled-components' {
         font: {
             light_16_24: string;
             normal_14_22: string;
+            normal_14_18: string;
             normal_16_18: string;
             normal_10_12: string;
             normal_13_18: string;

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import xBtn from '../../../assets/xBtn.png'
-import searchPurple from '../../../assets/searchPurple.png'
+import searchPurple from '../../../assets/searchBtn.png'
 
 const SearchDiv = styled.div`
     display: flex;
-    width: 400px;
+    width: 360px;
     height: 48px;
     padding-left: 14px;
     border: 1px solid rgb(95, 0, 128);
@@ -30,7 +30,7 @@ const SearchBtn = styled.button`
     height: 40px;
     margin: 10px;
     bottom: 3px;
-    background: url(${searchPurple}) center no-repeat;
+    background: url(${searchPurple}) 40%;
 }
 `
 

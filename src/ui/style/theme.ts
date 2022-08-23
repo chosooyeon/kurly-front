@@ -48,6 +48,7 @@ const mainTheme: DefaultTheme = {
     font: {
         light_16_24: fontStyle({ fontWeight: 300, fontSize: 16, lineHeight: 24 }),
         normal_14_22: fontStyle({ fontWeight: 400, fontSize: 14, lineHeight: 22 }),
+        normal_14_18: fontStyle({ fontWeight: 400, fontSize: 14, lineHeight: 22 }),
         normal_16_18: fontStyle({ fontWeight: 400, fontSize: 16, lineHeight: 18 }),
         normal_13_18: fontStyle({ fontWeight: 400, fontSize: 13, lineHeight: 18 }),
         medium_12_13: fontStyle({ fontWeight: 500, fontSize: 12, lineHeight: 13 }),

@@ -9,17 +9,35 @@ const Banner = styled.div`
 `;
 
 const FixHeader = styled.div`
+    top: 0;
     z-index: 3;
     background-color: white;
     position: fixed;
     display: inline-flex;
-    width: 1050px;
+    width: 100%;
     height: 56px;
     margin: 0px auto;
+`
+
+const SideUl = styled.ul`
+    display: flex;
+    float: right;
+    font-size: 12px;
+    margin: 10px 10px;
+`
+
+const SideLi = styled.li`
+    margin: 0 10px;
+`
+
+const SubHeader = styled.div`
+    display: flex;
+    height: 100px;
+    padding-top: 36px;
 `
 
 const MobileHeaderTop = styled.div`
     background-color: ${props => props.theme.color.brand};
 `
 
-export { Banner, FixHeader, MobileHeaderTop }
+export { Banner, FixHeader, SideUl, SideLi, SubHeader, MobileHeaderTop }

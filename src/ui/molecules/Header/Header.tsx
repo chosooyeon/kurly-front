@@ -46,8 +46,8 @@ const Header = () => {
                     {/* <ul style={{ display:'inline-flex' }}>
                         <div>찾기</div>
                     </ul> */}
-                    <ul style={{ display:'flex' }}>
-                        <li><img width={42} height={42} src={location}/></li>
+                    <ul style={{ display:'flex', alignItems:'flex-end' }}>
+                        <li style={{marginTop:12}}><img width={42} height={42} src={location}/></li>
                         <li><img width={36} height={36} src={heart}/></li>
                         <li><img width={36} height={36} src={cert}/></li>
                     </ul>
@@ -55,34 +55,33 @@ const Header = () => {
                 </>
                 :
                 <>
-                <S.Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</S.Banner>
+                {/* <S.Banner>지금 가입하고 인기상품 <b>100원</b>에 받아가세요!</S.Banner> */}
                 <div style={{ marginBottom:'20px' }}>
-                    <ul style={{ display:'flex', float:'right' }}>
-                        <li>회원가입</li>
+                    <S.SideUl>
+                        <S.SideLi>회원가입</S.SideLi>
                         <li>|</li>
-                        <li>로그인</li>
+                        <S.SideLi>로그인</S.SideLi>
                         <li>|</li>
-                        <li>고객센터</li>
-                    </ul>
-                    <div style={{ display:'flex', height: '100', paddingTop: '36' }}>
+                        <S.SideLi>고객센터</S.SideLi>
+                    </S.SideUl>
+                    <S.SubHeader>
                         <div>
-                            <div><img src={ kurly } width={ 86 } height={ 82 }/></div>
+                            <div><img style={{ marginTop: -20 }} src={ kurly } height={ 82 }/></div>
                             {/* <ul style={{ display:'flex' }}>
                                 <li>마켓컬리</li>
                                 <li>|</li>
                                 <li>뷰티컬리</li>
                             </ul> */}
                         </div>
-                        <Search></Search>
+                        <div style={{textAlign:'center'}}><Search></Search></div>
                         <div>
-                            <ul style={{ display:'flex' }}>
-                                <li><img width={42} height={42} src={location}/></li>
-                                <li><img width={36} height={36} src={heart}/></li>
-                                <li><img width={36} height={36} src={cert}/></li>
+                            <ul style={{ display:'flex', alignItems:'center' }}>
+                                <li><img width={36} height={36} src={location}/></li>
+                                <li><img width={30} height={30} src={heart}/></li>
+                                <li><img width={30} height={30} src={cert}/></li>
                             </ul>
                         </div>
-                        <div></div>
-                    </div>
+                    </S.SubHeader>
                     {/* <Fixed>
                         <div><HamberImg/></div>
                         지금 가입하고 인기상품 100원에 받아가세요!
