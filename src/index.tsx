@@ -8,6 +8,8 @@ import mainTheme from './ui/style/theme';
 import GlobalStyle from './ui/style/GlobalStyle';
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import { Provider } from 'react-redux';
+import store from './service/store/config';
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(
@@ -33,7 +35,9 @@ root.render(
       <QueryClientProvider client={queryClient}>
         {/* <Suspense fallback={<div>loading</div>}> */}
             {/* <ErrorBoundary> */}
+            <Provider store={store}>
               <App />
+            </Provider>
             {/* </ErrorBoundary> */}
         {/* </Suspense> */}
       </QueryClientProvider>

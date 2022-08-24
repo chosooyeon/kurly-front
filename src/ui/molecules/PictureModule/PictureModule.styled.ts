@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import food2 from '../../../assets/food2.png';
 import active from '../../../assets/icon/active.png'
 import none from '../../../assets/icon/none.png'
 import { isMobile } from "../../../service/hooks";
 
-const Origin = styled.div`
+const Origin = styled.div<{path?:string}>`
     ${isMobile() ? `width: 100vw;`:`width: 562px;` }
     height: 464px;
-    background-image: url(${food2});
+    background-image: url(${props => props.path});
     background-size: cover;
     background-position: center;
     position: relative;

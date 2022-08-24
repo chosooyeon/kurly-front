@@ -12,7 +12,7 @@ const CartItem = () => {
                 <S.Count>
                     <S.CountInner>-</S.CountInner>
                     <S.CountInner>5</S.CountInner>
-                    <S.CountInner>+</S.CountInner>
+                    <S.CountInner></S.CountInner>
                 </S.Count>
             </S.Section>
         </S.Wrap>

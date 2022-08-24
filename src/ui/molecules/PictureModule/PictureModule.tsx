@@ -1,13 +1,22 @@
+import { useState } from 'react'
 import * as S from './PictureModule.styled'
-import Slider from '../Slider';
 
-const PictureModule = () => {
+const PictureModule = (props?:any) => {
+    const [focus, setFocus] = useState<number>(0);
+
+    const onClickSearchData = (v:string,i:number) => {
+        props?.searchData(v);
+        setFocus(i);
+    }
     return <>
-        <S.Origin>
-            <S.Pointer location={{x: 12.5, y: 13.5, isActive: false}}/>
-            <S.Pointer location={{x: 50, y: 50, isActive: true}}/>
-            <S.Pointer location={{x: 30, y: 15, isActive: false}}/>
-            <S.Pointer location={{x: 22, y: 77, isActive: false}}/>
+        <S.Origin path={props?.picture?.image}>
+            {
+                props?.picture?.tags.map((item:any, i:number) => {
+                    return <div key={item?.x} onClick={() => onClickSearchData(item?.keyword,i)}>
+                        <S.Pointer location={{x: item?.x, y: item?.y, isActive: i === focus}}/>
+                    </div>
+                })
+            }
         </S.Origin>
     </>
 }
