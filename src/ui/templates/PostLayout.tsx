@@ -20,7 +20,7 @@ const PostLayout = (props:getPost) => {
         <>
             <Title>{props?.title}</Title>
             <CategoryList/>
-            {/* <CategoryMiddle/> */}
+            <CategoryMiddle/>
             <div style={{display:'flex', marginTop: "120px"}}>
                 <ProductItem/>
                 <ProductItem/>
