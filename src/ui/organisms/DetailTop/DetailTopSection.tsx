@@ -5,7 +5,7 @@ import Slider from '../../molecules/Slider/Slider';
 import DetailSearchWrap from './DetailSearchWrap';
 import { getSearch } from '../../../service/api';
 import { useAppDispatch, useAppSelector } from '../../../service/store/config';
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 interface IDetailTopSection {
     detail?: {
@@ -25,11 +25,13 @@ interface IDetailTopSection {
 const DetailTopSection = (props?:IDetailTopSection) => {
     const { value } = useAppSelector(state => state.searchData);
     const dispatch = useAppDispatch();
+    const [result , setResult] = useState<any>('')
 
     const onSearchData = (v?:string) => {
         const res = getSearch(v);
         res.then((r) => {
             console.log(r);
+            setResult(r);
             dispatch(r);
         })
     }
@@ -45,11 +47,11 @@ const DetailTopSection = (props?:IDetailTopSection) => {
         <TopSection>
             <PictureModule searchData={onSearchData} picture={props?.detail?.post}/>
             <RightWrap>
-                <DetailSearchWrap searchData={value} {...props}/>
+                <DetailSearchWrap searchDataa={result} {...props}/>
             </RightWrap>
         </TopSection>
         <MTopSection>
-            <Slider searchData={onSearchData} {...props}></Slider>
+            <Slider searchData={onSearchData} searchDataa={result} {...props}></Slider>
         </MTopSection>
         </>
     )
