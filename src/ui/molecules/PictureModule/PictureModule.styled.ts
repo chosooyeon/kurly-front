@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import food2 from '../../../assets/food2.png';
 import active from '../../../assets/icon/active.png'
 import none from '../../../assets/icon/none.png'
 import { isMobile } from "../../../service/hooks";

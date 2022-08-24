@@ -9,7 +9,7 @@ const Slider = (props:any) => {
         <Slide
             slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            onSwiper={(swiper:any) => console.log(swiper)}
         >
             <SwiperSlide><PictureModule searchData={props?.searchData} picture={props?.detail?.post}/></SwiperSlide>
             <SwiperSlide><DetailSearchWrap {...props}/></SwiperSlide>
