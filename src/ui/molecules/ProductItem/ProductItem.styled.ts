@@ -12,6 +12,7 @@ const Pay = styled.div`
 `;
 
 const CertBtn = styled.button`
+  background-color: transparent;
   border:0;
   outline: 0;
   position: absolute;

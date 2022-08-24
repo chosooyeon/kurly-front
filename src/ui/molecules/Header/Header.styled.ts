@@ -17,7 +17,7 @@ const FixHeader = styled.div`
     width: 100%;
     height: 56px;
     margin: 0px auto;
-
+    justify-content: space-between;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;

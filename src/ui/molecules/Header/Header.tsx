@@ -33,16 +33,16 @@ const Header = () => {
                 ?
                 <>
                 <S.FixHeader>
-                    <ul style={{ display:'inline-flex' }}>
+                    <ul style={{ display:'inline-flex', alignItems:'center', marginLeft:12 }}>
                         <li><img width="24" src={hamber}/></li>
-                        <li style={{marginLeft:12}}>카테고리</li>
+                        {/* <li style={{marginLeft:12}}>카테고리</li> */}
                     </ul>
-                    <ul style={{ display:'inline-flex', marginLeft:12 }}>
+                    {/* <ul style={{ display:'inline-flex', marginLeft:12 }}>
                         <li>신상품</li>
                         <li>베스트</li>
                         <li>알뜰쇼핑</li>
                         <li>특가/혜택</li>
-                    </ul>
+                    </ul> */}
                     {/* <ul style={{ display:'inline-flex' }}>
                         <div>찾기</div>
                     </ul> */}

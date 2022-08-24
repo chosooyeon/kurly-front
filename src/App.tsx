@@ -14,7 +14,8 @@ import MyTopButton from "./ui/atoms/top/MyTopButton";
 function App() {
   return (
     <BrowserRouter>
-      { isMobile() ? <MobileHeader/> : <Header/> }
+    <Header/>
+      {/* { isMobile() ? <MobileHeader/> : <Header/> } */}
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/detail' element={<Detail />}/>
@@ -27,7 +28,8 @@ function App() {
               <p>빈 페이지 입니다</p>
             </main>}/>
       </Routes>
-      { isMobile() ? <MobileBottom/> : <Footer/> }
+      <Footer/>
+      {/* { isMobile() ? <MobileBottom/> : <Footer/> } */}
       { isMobile() ? <></> : <MyTopButton/>}
     </BrowserRouter>
   );
