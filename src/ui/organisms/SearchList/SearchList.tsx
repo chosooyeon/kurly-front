@@ -5,7 +5,7 @@ import { putCart } from "../../../service/api";
 import { useEffect } from "react";
 
 
-const SearchList = () => {
+const SearchList = (props?:any) => {
     const { value } = useAppSelector(state => state.searchData);
     const onPutCart = (v?:any) => {
         const res = putCart(v);
@@ -15,7 +15,9 @@ const SearchList = () => {
     return <>
 
     <Wrap>
-        <SearchItem onPutCart={onPutCart} item={value}/>
+        {props?.res?.map((item:any) => {
+            return <SearchItem onPutCart={onPutCart} item={item}/>
+        })}
     </Wrap>
     
     </>

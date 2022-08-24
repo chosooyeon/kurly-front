@@ -6,13 +6,13 @@ import { Slide } from './Slider.styled';
 
 const Slider = (props:any) => {
     return <>
-        <Slide
-            slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper:any) => console.log(swiper)}
-        >
-            <SwiperSlide><PictureModule searchData={props?.searchData} picture={props?.detail?.post}/></SwiperSlide>
-            <SwiperSlide><DetailSearchWrap {...props}/></SwiperSlide>
+        <Slide>
+        {/*    <SwiperSlide>*/}
+                <PictureModule searchData={props?.searchData} picture={props?.detail?.post}/>
+            {/*</SwiperSlide>*/}
+            {/*<SwiperSlide>*/}
+                <DetailSearchWrap searchDataa={props?.searchDataa} {...props}/>
+            {/*</SwiperSlide>*/}
         </Slide>
     </>
 }
