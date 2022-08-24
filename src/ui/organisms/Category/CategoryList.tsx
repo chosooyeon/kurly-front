@@ -5,7 +5,9 @@ const CategoryList = () => {
     return(
         <>
             <div>
-                <ul><img width={'98%'} src={ banner }></img></ul>
+                <ul>
+                    <img width={'98%'} src={ banner }></img>
+                </ul>
                 <UlFont>
                     <li>전체보기</li>
                     <li>국찌개</li>
@@ -22,6 +24,8 @@ const CategoryList = () => {
 }
 
 const UlFont = styled.ul`
+    align-items: center;
+    justify-content: space-around;
     box-sizing: border-box;
     position: absolute;
     width: 1038px;

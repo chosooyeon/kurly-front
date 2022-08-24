@@ -3,6 +3,7 @@ import xBtn from '../../../assets/xBtn.png'
 import searchPurple from '../../../assets/searchBtn.png'
 
 const SearchDiv = styled.div`
+    margin-left: 32px;
     display: flex;
     width: 360px;
     height: 48px;

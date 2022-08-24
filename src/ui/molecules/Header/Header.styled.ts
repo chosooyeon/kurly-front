@@ -17,6 +17,12 @@ const FixHeader = styled.div`
     width: 100%;
     height: 56px;
     margin: 0px auto;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: rgb(51, 51, 51);
 `
 
 const SideUl = styled.ul`

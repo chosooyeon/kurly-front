@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import top from '../../../assets/cert.png'
+import top from '../../../assets/top.png'
 
 const TopButton = styled.div`
     z-index: 3;

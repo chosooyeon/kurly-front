@@ -34,10 +34,10 @@ const Header = () => {
                 <>
                 <S.FixHeader>
                     <ul style={{ display:'inline-flex' }}>
-                        <li><img src={hamber}/></li>
-                        <li>카테고리</li>
+                        <li><img width="24" src={hamber}/></li>
+                        <li style={{marginLeft:12}}>카테고리</li>
                     </ul>
-                    <ul style={{ display:'inline-flex' }}>
+                    <ul style={{ display:'inline-flex', marginLeft:12 }}>
                         <li>신상품</li>
                         <li>베스트</li>
                         <li>알뜰쇼핑</li>
@@ -46,11 +46,11 @@ const Header = () => {
                     {/* <ul style={{ display:'inline-flex' }}>
                         <div>찾기</div>
                     </ul> */}
-                    <ul style={{ display:'flex', alignItems:'flex-end' }}>
+                    {/* <ul style={{ display:'flex', alignItems:'flex-end' }}>
                         <li style={{marginTop:12}}><img width={42} height={42} src={location}/></li>
                         <li><img width={36} height={36} src={heart}/></li>
                         <li><img width={36} height={36} src={cert}/></li>
-                    </ul>
+                    </ul> */}
                 </S.FixHeader>
                 </>
                 :
@@ -75,11 +75,11 @@ const Header = () => {
                         </div>
                         <div style={{textAlign:'center'}}><Search></Search></div>
                         <div>
-                            <ul style={{ display:'flex', alignItems:'center' }}>
+                            {/* <ul style={{ display:'flex', alignItems:'center' }}>
                                 <li><img width={36} height={36} src={location}/></li>
                                 <li><img width={30} height={30} src={heart}/></li>
                                 <li><img width={30} height={30} src={cert}/></li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </S.SubHeader>
                     {/* <Fixed>
