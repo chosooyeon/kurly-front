@@ -9,7 +9,6 @@ const BottomSheet = () => {
     const [isExpand, setExpand] = useState<boolean>(false)
     const handleExpand = () => {
         setExpand(v => !v)
-        console.log(isExpand)
     }
 
 
@@ -23,11 +22,10 @@ const BottomSheet = () => {
             {isExpand ? 
                 <>
                     <CartList />
-                    <SearchFull onHandleExpand={handleExpand} txt={['한 번에 장바구니에 담기']}/>
+                    <SearchFull onHandleExpand={handleExpand} txt={['N개의 상품 담기']}/>
                 </>
             : 
                 <Section>
-                    <ImgAsset/>
                     <SearchFull onHandleExpand={handleExpand} txt={['한 번에 장바구니에 담기']}/>
                 </Section>
             }

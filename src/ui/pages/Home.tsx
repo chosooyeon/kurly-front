@@ -14,7 +14,6 @@ interface Post {
 const url = `https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`
 
 const Post = () => {
-
     const data = useQuery("posts", () => axios.get(url), {
         onError: (error) => toast.error('무언가 잘못되었다'),
     });

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import cart from '../../../assets/button/detail_cart.svg'
 import food from '../../../assets/food2.png'
+import search from '../../../assets/search.png'
 
 const Img = styled.div<{path?: string}>`
     width: 464px;
@@ -11,9 +12,10 @@ const Img = styled.div<{path?: string}>`
 `
 
 const ImgAsset = styled.div<{props?: any}>`
+
     width: 25px;
     height: 25px;
-    background: url(${cart}) center no-repeat;
+    background: url(${cart}) no-repeat center center;
     background-size: contain;
 `
 

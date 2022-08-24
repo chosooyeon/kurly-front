@@ -13,7 +13,7 @@ const Wrap = styled.div<{expand?:boolean}>`
 `
 
 const Section = styled.div`
-    padding: 15px;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
 `
