@@ -1,11 +1,10 @@
 
 import PostLayout from "../templates/PostLayout";
+import Paging from "../atoms/paging/Paging";
 import { useQuery } from "react-query";
 import toast from 'react-hot-toast'
 import axios from "axios";
-import useDebounceValue from "../../service/Debounce";
-
-// import { debounce } from 'lodash';
+// import useDebounceValue from "../../service/debounce";
 interface Post {
     result?: any,
     pageTotal?: number,
@@ -15,28 +14,20 @@ interface Post {
 const url = `https://jj372vsokc.execute-api.ap-northeast-2.amazonaws.com/dev/post?take=0&page=0&keyword=`
 
 const Post = () => {
-
-    // const query = useQuery("posts", () => axios.get(url), {
-    //     onError: (error) => toast.error('무언가 잘못되었다'),
-    // });
-    
-    // const data = useDebounceValue(query, 500);
-    // const { status, data, error, isFetching, isLoading } = useReactQuery(
-    //     debouncedSearchQuery,
-    //     "0"
-    // );
-
-    
+    const data = useQuery("posts", () => axios.get(url), {
+        onError: (error) => toast.error('무언가 잘못되었다'),
+    });
 
     return(
-        <></>
-        // <>
-        //     <PostLayout {...data}/>  
-        //     <PostLayout {...data}/>  
-        //     <PostLayout {...data}/>  
-        //     <PostLayout {...data}/>  
-        //     <PostLayout {...data}/>  
-        // </>
+        <>
+            <PostLayout/>
+            {/* <PostLayout {...data}/>  
+            <PostLayout {...data}/>  
+            <PostLayout {...data}/>  
+            <PostLayout {...data}/>  
+            <PostLayout {...data}/> */}
+            <Paging/>
+        </>
     )
 }
 

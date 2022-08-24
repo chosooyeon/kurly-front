@@ -1,4 +1,4 @@
-import ProductItem from '../molecules/ProductItem'
+import ProductItem from '../molecules/ProductItem/ProductItem'
 
 const ProductList = () => {
     return(
