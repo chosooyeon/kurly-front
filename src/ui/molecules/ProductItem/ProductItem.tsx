@@ -1,11 +1,14 @@
 import food1 from '../../../assets/food1.png';
 import cert from '../../../assets/addCert.png';
 import * as S from './ProductItem.styled'
+import { useNavigate } from "react-router-dom";
 
 const ProductItem = (props:any) => {
+    const navigate = useNavigate();
+
     return(
         <>
-            <div>
+            <div onClick={() => navigate("/detail")}>
                 <img src={ food1 } width={ 249 } height={ 320 } alt='img'>
                 </img>
                 <div><S.CertBtn><img src={cert}/></S.CertBtn></div>
